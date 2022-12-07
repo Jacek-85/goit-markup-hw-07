@@ -1,3 +1,15 @@
+.container{
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+    flex-direction: row;
+}
+.flex_row{
+    flex-direction: row;
+    display: flex;
+    align-items: baseline;
+}
 .header {
     &__pages{
         display: flex;
@@ -6,52 +18,39 @@
         padding: 24px 0 25px 0;
         align-items: center;
         border-bottom: 1px solid #ececec;
-        &__address {
-                margin-left: auto;
+    }
+    &__address {
+        margin-left: auto;
         
-                &__item {
-                    padding-right: 50px;
-                }
+        &--item {
+            padding-right: 50px;
+        }
         
-                &__link {
-                    color: var(--darkgrey);
-                    font-style: normal;
-                    font-size: 14px;
-                    line-height: 1.14;
-                    text-decoration: none;
-                    font-weight: 500;
+        &--link {
+            color: var(--darkgrey);
+            font-style: normal;
+            font-size: 14px;
+            line-height: 1.14;
+            text-decoration: none;
+            font-weight: 500;
         
-                    &:hover,
-                    &:focus {
-                        color: var(--blue);
-                        text-decoration: none;
-                        fill: var(--blue);
-                        cursor: pointer;
-                    }
-        
-                    &__email {
-                        margin-right: 10px;
-                        vertical-align: middle;
-                    }
-        
-                    &__telefon {
-                        margin-right: 10px;
-                        vertical-align: text-bottom;
-                    }
-                }
+            &:hover,
+            &:focus {
+                color: var(--blue);
+                text-decoration: none;
+                fill: var(--blue);
+                cursor: pointer;
             }
-    }
-    &__container{
-        width: 100%;
-        max-width: 1200px;
-        padding: 0 15px;
-        margin: 0 auto;
-        flex-direction: row;
-    }
-    &__flex_row{
-        flex-direction: row;
-        display: flex;
-        align-items: baseline;
+        }        
+        &--email {
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        
+        &--telefon {
+            margin-right: 10px;
+            vertical-align: text-bottom;
+        }
     }
     &__logo{
         font-family: "Raleway", sans-serif;
@@ -65,76 +64,76 @@
         color: var(--blue);
     }
 
-    &__nav{
-        &__address{
-            display: flex;
+}
+.nav{
+    &__address{
+        display: flex;
+    }
+    &__links{
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        padding-left: 93px;
+    }
+    &__bluelink,
+    &__agencja,
+    &__portfolio{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        text-decoration: none;
+    }
+    &__agencja{
+        color: var(--blue);
+        position: relative;
+        height: 100%;
+        padding-bottom: 57%;
+        &::after{
+            display: block;
+            border-bottom: 4px solid var(--blue);
+            border-radius: 2px;
+            position: absolute;
+            content: "";
+            width: 100%;
+            bottom: 0px;
+            left: 0px;
         }
-        &__links{
-            display: flex;
-            flex-direction: row;
-            gap: 50px;
-            padding-left: 93px;
-        }
-        &__bluelink,
-        &__agencja,
-        &__portfolio{
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 1.14;
-            text-decoration: none;
-        }
-        &__agencja{
+        &:hover{
+            cursor: pointer;
             color: var(--blue);
-            position: relative;
-            height: 100%;
-            padding-bottom: 57%;
-            &::after{
-                display: block;
-                border-bottom: 4px solid var(--blue);
-                border-radius: 2px;
-                position: absolute;
-                content: "";
-                width: 100%;
-                bottom: 0px;
-                left: 0px;
-            }
-            &:hover{
-                cursor: pointer;
-                color: var(--blue);
-            }
         }
-        &__portfolio{
+    }
+    &__portfolio{
+        color: var(--blue);
+        position: relative;
+        height: 100%;
+        padding-bottom: 52%;
+        &::after{
+            display: block;
+            border-bottom: 4px solid var(--blue);
+            border-radius: 2px;
+            position: absolute;
+            content: "";
+            width: 100%;
+            bottom: 0px;
+            left: 0px;
+        }
+        &:hover{
+            cursor: pointer;
             color: var(--blue);
-            position: relative;
-            height: 100%;
-            padding-bottom: 52%;
-            &::after{
-                display: block;
-                border-bottom: 4px solid var(--blue);
-                border-radius: 2px;
-                position: absolute;
-                content: "";
-                width: 100%;
-                bottom: 0px;
-                left: 0px;
-            }
-            &:hover{
-                cursor: pointer;
-                color: var(--blue);
-            }
         }
-        &__bluelink{
+    }
+    &__bluelink{
+        color: var(--dark);
+        &:visited{
             color: var(--dark);
-            &:visited{
-                color: var(--dark);
-            }
-            &:hover,
-            &:focus{
-                color: var(--blue);
-                text-decoration: none;
-                fill: var(--blue);
-                cursor: pointer;
-            }
+        }
+        &:hover,
+        &:focus{
+            color: var(--blue);
+            text-decoration: none;
+            fill: var(--blue);
+            cursor: pointer;
         }
     }
 }

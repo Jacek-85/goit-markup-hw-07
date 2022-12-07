@@ -5,7 +5,7 @@
         &:not(:last-child){
             padding-right: 30px;
         }
-        &__icon{
+        &--icon{
             width: 270px;
             height: 120px;
             display: flex;
@@ -15,14 +15,14 @@
             background: #f5f4fa;
             border-radius: 4px;
         }
-        &__heading{
+        &--heading{
             font-weight: 700;
             font-size: 14px;
             line-height: 1.14;
             text-align: left;
             padding-bottom: 10px;
         }
-        &__paragraph{
+        &--paragraph{
             color: var(--darkgrey);
             font-size: 14px;
             line-height: 1.71;
